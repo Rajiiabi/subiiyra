@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> RA Web </title>
+    <style>
+        span {
+            color: red;
+        }
+
+        p {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label>Enter Number:</label>
+        <input type="text" id="number">
+        <br><br>
+        <button type="button" onclick="checkvalue()">Submit</button>
+    </form>
+
+    <h2>Number Status:<span id="status"></span></h2>
+
+    <script>
+        function checkvalue() {
+            var a = document.getElementById("number").value;
+
+            if (a % 2 == 0) {
+                document.getElementById("status").innerHTML = "This Value is Even Number"
+            }
+            else {
+                document.getElementById("status").innerHTML = "This Value is Odd Number"
+            }
+        }
+    </script>
+
+    <p>(We can Use % Operator.)</p>
+
+</body>
+
+</html>

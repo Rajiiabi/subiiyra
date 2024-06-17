@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>  
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"  href="icon.css">
+        
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  
+  <script>
+
+    $( function() {
+    $( "#datepicker" ).datepicker();
+    } );
+
+    function conf(){
+        let x=document.getElementById("pass").value;
+        let y=document.getElementById("con").value;
+        if (x!=y) {         
+            alert("password invalid");
+        }
+    }
+
+    function pic(){
+        const l= document.getElementById("pass").value;
+        const m= l.length;
+        if (m!=8) {
+            alert("please enter 8 digit password");
+        }       
+    }
+    function pis(){
+        const o= document.getElementById("ab").value;
+        const p= o.length;
+        if (p!=7) {
+            alert("enter 7 character in name");
+        }       
+    }
+    
+    function noom(){
+        const a= document.getElementById("cor").value;
+        const b= a.length;
+        if (b!=10) {
+            alert("Contact no is invalid ");        
+        }
+    }
+
+    
+
+    function suk(){
+            var aa=document.getElementById("ab").value;
+            var bb=document.getElementById("datepicker").value;
+            const dobInput=document.getElementById("datepicker").value;
+            const dob=new Date(dobInput);
+            const today= new Date();           
+            var jjj = document.myform.Gender.value;
+            var cc=document.getElementById("ae").value; 
+            var ee=document.getElementById("pass").value;
+            var ff=document.getElementById("con").value;
+            var gg=document.getElementById("cor").value;
+            var hh=document.getElementById("pn").value;
+            var ii=document.getElementById("ag").value;
+            
+            if (aa=="") {
+                alert("Enter the Name");
+                return false;
+            }
+            if (bb=="") {
+                alert("Enter the DOB");
+                return false;
+            }
+            
+            if(jjj == null || jjj == ""){
+                alert("Select the Gender");
+                return false;
+            }
+            if (cc=="") {
+                alert("Enter the Email id");
+                return false;
+            } 
+            if (ee=="") {
+                alert("Enter Password");
+                return false;
+            }
+            if (ff=="") {
+                alert("Enter confirm Password");
+                return false;
+            }
+            if (gg=="") {
+                alert("Enter the Contact no");
+                return false;
+            }
+            if (hh=="") {
+                alert("Enter the address");
+                return false;
+            }
+            if (ii=="") {
+                alert("Enter the state");
+                return false;
+            }
+            if(today.getFullYear()-dob.getFullYear()<=18){
+              alert("DOB is Not ELigible");
+              return false;
+         }  
+                
+            else{
+                alert("registration sucessfully");
+                return false
+            }
+        } 
+
+  </script>
+
+</head>
+
+<style>
+    body{
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    .lo{
+        color: white;
+        background-color: orangered;
+        border-radius: 5px;
+        border: solid 0.5px;
+        width: 80px;
+        margin-left: 210px;
+        padding: 7px;
+    }
+    .kit{
+        text-align: right;
+          
+        margin-left: 40px;
+    }    
+    .to{
+        height: 580px;
+        border: solid 0.5px;
+        border-radius: 5px; 
+        margin-top: 40px;
+        width: 40%;
+        margin-left: 400px;
+    }
+    
+    h1{
+        margin-left: 200px;
+        color: orchid;
+    }
+    
+    input{
+        font-size: 15px; 
+        
+    }
+    .input-field{
+        width: 200px;       
+    }
+    i{
+        border-radius: 3px 0px 0px 3px;
+        background-color: greenyellow;
+        text-shadow: 0 0 10px black;
+        padding: 4px;
+    }
+    .dog{
+        width: 200px;
+    }
+    .addf{
+        font-size: 13px;
+        vertical-align: top;
+    }
+    P{
+        line-height: 5px;
+        color: firebrick;
+    }
+    
+</style>
+
+<body>
+    <form action="*" method="post" name="myform" onsubmit="return suk()">
+
+        <div class="to">    
+    <div class="ct">
+    <h1>Register</h1>
+    <div class="kit"><table><tr><td>
+        <div class="input-container">
+        <P>Name</P> </td> <td><i class="fa fa-user icon" > </i><input class="input-field" id="ab" type="text" onchange="pis()"  placeholder="Name" >
+        </div></td></tr><tr><td>
+        <div class="input-container">
+        <p>DOB</p>  </td><td><i class="fa fa-calendar icon" > </i><input class="input-field"  type="text" id="datepicker"  placeholder="DOB" >
+        </div> </td></tr><tr><td>
+        <div class="input-container">  
+        <P>Gender</P></td><td style="text-align: left;"><i class="fa fa-male" ></i><input type="radio" name="Gender" id="Gender"  placeholder="male"><span style="color: firebrick;">Male</span> &nbsp;
+        <i class="fa fa-female" > </i><input type="radio"  name="Gender" id="Gender" placeholder="female"><span style="color: firebrick;">Female</span>
+       </td></tr><tr><td>
+        <div class="input-container">
+        <P>Email</P>    </td><td><i class="fa fa-envelope" > </i><input class="input-field" id="ae" type="email" placeholder="Email" >
+        </div> </td></tr><tr><td>
+        <div class="input-container">
+        <p>Password</p> </td><td><i class="fa fa-lock" ></i><input class="input-field" type="password" id="pass" onchange="pic()"  placeholder="Password">
+        </div>  </td></tr><tr><td>  
+        <div class="input-container">
+        <P>Confirm password</P> </td><td><i class="fa fa-unlock icon" > </i><input class="input-field" id="con" onchange="conf()"  type="password"  placeholder="Confirm password" >
+        </div> </td></tr><tr><td>
+        <div class="input-container">
+        <P>contact no</P>   </td><td><i class="fa fa-phone icon" > </i><input class="input-field" type="number" id="cor"  onchange="noom()"  placeholder="contact no" >
+        </div> </td></tr><tr><td>
+        <div class="input-container">
+        <P>Address</P>  </td><td><i class="fa fa-address-card" > </i><textarea class="addf" id="pn" type="text" placeholder="Address" rows="5" cols="26"></textarea>
+        </div></td></tr><tr><td>
+        <P>State</P> </td><td><i class="fa fa-flag" > </i><input class="dog" list="stat" id="ag" type="text" placeholder="Select State">
+        <datalist id="stat">
+            <option value="Andhra Pradesh">
+            <option value="Arunachal Pradesh">
+            <option value="Assam">
+            <option value="Bihar">
+            <option value="Chhattisgarh">
+            <option value="Goa">  
+            <option value="Gujarat">    
+            <option value="Himachal Pradesh">    
+            <option value="Karnataka">  
+            <option value="Kerala"> 
+            <option value="Tamil Nadu">  
+            <option value="Maharashtra">    
+            <option value="Punjab">    
+            <option value="Rajasthan">  
+            <option value="Telangana"> 
+          </datalist>        
+        </td> </tr>  </table>  </div> <br>  
+    <button class="lo" type="submit">Submit</button>    
+    </div></div>                
+    </form>
+</body>
+</html>

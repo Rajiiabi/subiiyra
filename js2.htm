@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RA Webpage</title>
+</head>
+<body>
+    <h1> Tamil   = <span id="data1">100</span></h1>
+    <h1> English = <span id="data2">100</span></h1>
+    <h1> Maths   = <span id="data3">100</span></h1>
+    <h1> Science = <span id="data4">100</span></h1>
+    <h1> Social  = <span id="data5">500</span></h1>
+
+    <button type="button" onclick="add()">Total</button>
+    <p id="totalResult"></p>
+
+    <script>
+        function add() {
+            var data1 = parseFloat(document.getElementById("data1").innerText) || 0;
+            var data2 = parseFloat(document.getElementById("data2").innerText) || 0;
+            var data3 = parseFloat(document.getElementById("data3").innerText) || 0;
+            var data4 = parseFloat(document.getElementById("data4").innerText) || 0;
+            var data5 = parseFloat(document.getElementById("data5").innerText) || 0;
+
+            var total = data1 + data2 + data3 + data4 + data5;
+
+            document.getElementById("totalResult").innerHTML = "Total: " + total;
+        }
+    </script>
+</body>
+</html>
